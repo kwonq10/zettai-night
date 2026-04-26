@@ -603,10 +603,15 @@ summary::-webkit-details-marker { display: none; }
 .insta-embed-wrap {
   max-width: 540px;
   margin: 0 auto;
-  min-height: 400px;
+  min-height: 640px;
 }
-.insta-embed-wrap .instagram-media {
-  margin: 0 auto !important;
+.insta-embed-frame {
+  width: 100%;
+  min-height: 640px;
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .insta-footer { text-align: center; margin-top: 24px; }
@@ -964,21 +969,13 @@ summary::-webkit-details-marker { display: none; }
     </div>
 
     <div class="insta-embed-wrap reveal">
-      <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DXEQ3VzkfIT/?utm_source=ig_embed&amp;utm_campaign=loading"
-        data-instgrm-version="14"
-        style="background:#FFF; border:0; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.08); margin:0 auto; max-width:540px; min-width:280px; width:100%; padding:0;">
-        <div style="padding:32px 24px; text-align:center;">
-          <div style="font-size:40px; margin-bottom:12px;">📸</div>
-          <div style="font-family:'Zen Kaku Gothic New',sans-serif; font-weight:900; color:#2E3192; font-size:18px; margin-bottom:8px;">過去のイベントの様子</div>
-          <div style="color:#666; font-size:13px; margin-bottom:20px; line-height:1.7;">Instagramでイベントの雰囲気を<br>ぜひチェックしてください</div>
-          <a href="https://www.instagram.com/p/DXEQ3VzkfIT/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank" rel="noopener"
-             style="display:inline-block; background:#2E3192; color:#FFCC00; font-weight:900; padding:12px 28px; border-radius:999px; text-decoration:none; font-size:14px; letter-spacing:0.05em;">
-            Instagramでこの投稿を見る →
-          </a>
-        </div>
-      </blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
+      <iframe
+        class="insta-embed-frame"
+        src="https://www.instagram.com/p/DXEQ3VzkfIT/embed"
+        loading="lazy"
+        allowfullscreen
+        title="絶対そうしよナイトのInstagram動画">
+      </iframe>
     </div>
 
     <div class="insta-footer reveal reveal-delay-1">
