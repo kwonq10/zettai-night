@@ -224,6 +224,17 @@ summary::-webkit-details-marker { display: none; }
 }
 @media (min-width: 768px) { .hero-subhead { font-size: 40px; } }
 .hero-lead { max-width: 640px; margin: 0 auto 40px; }
+.hero-target-copy {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  color: var(--c-navy);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+@media (min-width: 768px) {
+  .hero-target-copy { font-size: 18px; }
+}
 
 .hero-summary-bar {
   display: flex;
@@ -249,6 +260,55 @@ summary::-webkit-details-marker { display: none; }
 }
 @media (min-width: 768px) {
   .hero-summary-item { font-size: 14px; }
+}
+.hero-overview {
+  max-width: 760px;
+  margin-top: 18px;
+}
+.hero-overview-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .hero-overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.hero-overview-item {
+  background: var(--c-bg);
+  border-radius: 18px;
+  padding: 16px 18px;
+  text-align: left;
+}
+.hero-overview-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--c-navy);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+.hero-overview-value {
+  color: var(--c-navy);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.hero-reassurance-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.hero-reassurance-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 204, 0, 0.16);
+  color: var(--c-navy);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 /* INFO CARD */
@@ -403,10 +463,45 @@ summary::-webkit-details-marker { display: none; }
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-weight: 900;
   color: var(--c-navy);
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 8px;
 }
-.point-desc { font-size: 14px; }
+.point-desc { font-size: 15px; line-height: 1.8; }
+.about-comfort-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+@media (min-width: 768px) {
+  .about-comfort-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.comfort-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--c-bg);
+}
+.comfort-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--c-yellow);
+  color: var(--c-navy);
+  font-weight: 900;
+}
+.comfort-text {
+  color: var(--c-navy);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.7;
+}
 
 /* ============================================================ MEMBERS ============================================================ */
 .members-subtitle { margin-top: 16px; font-size: 13px; color: var(--c-navy); font-weight: 700; letter-spacing: 0.1em; }
@@ -440,6 +535,7 @@ summary::-webkit-details-marker { display: none; }
 .profile-name-jp { color: var(--c-navy); font-weight: 700; margin-top: 4px; }
 .profile-divider { height: 1px; background: #E5E5E5; margin: 16px 0; }
 .profile-bio { font-size: 14px; line-height: 1.75; }
+.section-inline-cta { margin-top: 32px; text-align: center; }
 
 /* ============================================================ VENUE ============================================================ */
 .venue-image {
@@ -516,6 +612,13 @@ summary::-webkit-details-marker { display: none; }
 .insta-footer { text-align: center; margin-top: 24px; }
 .insta-footer-link { display: inline-flex; align-items: center; gap: 8px; color: var(--c-navy); font-weight: 700; font-size: 14px; }
 .insta-footer-link:hover { text-decoration: underline; }
+.section-intro-copy {
+  max-width: 720px;
+  margin: 18px auto 0;
+  color: var(--c-text);
+  font-size: 15px;
+  line-height: 1.9;
+}
 
 /* ============================================================ FAQ ============================================================ */
 .faq-item { background: var(--c-bg); border-radius: var(--r-card); padding: 20px; margin-bottom: 16px; }
@@ -523,7 +626,7 @@ summary::-webkit-details-marker { display: none; }
 .faq-summary-inner { display: flex; align-items: center; gap: 12px; flex: 1; padding-right: 12px; }
 .faq-toggle { color: var(--c-yellow-dark); font-size: 18px; font-weight: 900; transition: transform 0.3s ease; flex-shrink: 0; }
 .faq-item[open] .faq-toggle { transform: rotate(45deg); }
-.faq-answer { margin-top: 12px; padding-left: 52px; font-size: 14px; }
+.faq-answer { margin-top: 12px; padding-left: 52px; font-size: 15px; line-height: 1.8; }
 
 .num-circle {
   display: inline-flex;
@@ -600,6 +703,7 @@ summary::-webkit-details-marker { display: none; }
 /* ============================================================ UTIL ============================================================ */
 .mt-4 { margin-top: 16px; }
 .text-sm { font-size: 14px; }
+.body-copy-lg { font-size: 16px; line-height: 1.95; }
 </style>
 </head>
 
@@ -639,37 +743,40 @@ summary::-webkit-details-marker { display: none; }
     </div>
 
     <div class="hero-center reveal">
-      <h1 class="hero-subhead">挑戦したい人の背中を<br>押す、ゆるい夜。</h1>
+      <p class="hero-target-copy">副業・起業・表現活動・新しい挑戦を始めたい人へ。<br>金沢・香林坊でゆるくつながる飲み会です。</p>
+      <h1 class="hero-subhead">何か始めたい人、<br>仲間がほしい人へ。</h1>
       <p class="hero-lead">
-        コワーキングスクエア金沢香林坊を舞台に、仕事・暮らし・これからの話をゆるりと語り合う。初めての方も、お一人様も、大歓迎。乾杯から始まる、心地よい出会いを。
+        金沢・香林坊で開く、ゆるい挑戦者の飲み会。初参加でも、ひとり参加でも大丈夫。仕事や暮らし、この先やってみたいことを気軽に話せて、次の一歩が少し楽しみになる夜です。
       </p>
     </div>
 
-    <div class="info-card reveal">
+    <div class="info-card hero-overview reveal">
       <div class="info-card-head"><span class="tag tag-navy">開催概要</span></div>
-      <div class="info-row">
-        <span class="info-label">日時</span>
-        <span>
-          <span class="info-value-strong">近日開催</span>
-          <span class="info-value-sub">※詳細はPeatixにてご確認ください</span>
-        </span>
+      <div class="hero-overview-grid">
+        <div class="hero-overview-item">
+          <span class="hero-overview-label">日時</span>
+          <span class="hero-overview-value">近日開催<br><span class="info-value-sub">※詳細はPeatixにてご確認ください</span></span>
+        </div>
+        <div class="hero-overview-item">
+          <span class="hero-overview-label">場所</span>
+          <span class="hero-overview-value">コワーキングスクエア金沢香林坊</span>
+        </div>
+        <div class="hero-overview-item">
+          <span class="hero-overview-label">対象</span>
+          <span class="hero-overview-value">挑戦したい人・仲間がほしい人</span>
+        </div>
+        <div class="hero-overview-item">
+          <span class="hero-overview-label">参加費</span>
+          <span class="hero-overview-value">Peatixにてチケット販売</span>
+        </div>
       </div>
-      <div class="info-row">
-        <span class="info-label">会場</span>
-        <span>
-          コワーキングスクエア金沢香林坊
-          <span class="info-value-sub">(香林坊東急スクエア内)</span>
-        </span>
+      <div class="hero-reassurance-list">
+        <span class="hero-reassurance-chip">初参加歓迎</span>
+        <span class="hero-reassurance-chip">ひとり参加OK</span>
+        <span class="hero-reassurance-chip">お酒が飲めなくてもOK</span>
+        <span class="hero-reassurance-chip">途中参加・途中退出OK</span>
       </div>
-      <div class="info-row">
-        <span class="info-label">参加費</span>
-        <span>Peatixにてチケット販売</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">主催</span>
-        <span>株式会社絶対そうしよ！</span>
-      </div>
-      <a href="https://coworkingsquarekanazawa.peatix.com/" target="_blank" rel="noopener" class="cta-button cta-button-block">🍺 チケットを申し込む (Peatix)</a>
+      <a href="https://coworkingsquarekanazawa.peatix.com/" target="_blank" rel="noopener" class="cta-button cta-button-block">チケットを申し込む（Peatix）</a>
     </div>
   </div>
 
@@ -710,7 +817,7 @@ summary::-webkit-details-marker { display: none; }
       <h2 class="section-title" style="margin-top: 8px;">このイベントについて</h2>
     </div>
 
-    <div class="reveal prose">
+    <div class="reveal prose body-copy-lg">
       <p>「絶対そうしよナイト」は、金沢・香林坊の中心地で開催する、<span class="text-link">ゆるくつながる心地よい飲み会</span>です。</p>
       <p>仕事でもプライベートでも、「やってみたいな」と思うことに一歩踏み出したい。でも、一人だと不安。そんな気持ちに寄り添う場所をつくりたくて、このイベントを立ち上げました。</p>
       <p>格式ばった交流会ではありません。乾杯から始まる、気軽な立ち話。でも、<span class="text-link">その夜の会話が、明日の一歩につながる</span>かもしれない。そんな夜をご一緒しませんか。</p>
@@ -718,20 +825,27 @@ summary::-webkit-details-marker { display: none; }
 
     <div class="points-grid">
       <div class="point-card reveal reveal-delay-1">
-        <div class="icon-badge">🍻</div>
-        <h3 class="point-title">ゆるく乾杯</h3>
-        <p class="point-desc">形式張らない、ふらっと立ち寄れる飲み会です。</p>
+        <div class="icon-badge">🗣</div>
+        <h3 class="point-title">挑戦を話せる相手ができる</h3>
+        <p class="point-desc">頭の中で考えていたことを、気負わず言葉にできる夜です。</p>
       </div>
       <div class="point-card reveal reveal-delay-2">
-        <div class="icon-badge">💡</div>
-        <h3 class="point-title">挑戦を応援</h3>
-        <p class="point-desc">「やってみたい」を「やってみよう」に変える夜。</p>
+        <div class="icon-badge">🤝</div>
+        <h3 class="point-title">地元で応援し合える仲間に出会える</h3>
+        <p class="point-desc">会社員、フリーランス、学生など、立場を超えてゆるくつながれます。</p>
       </div>
       <div class="point-card reveal reveal-delay-3">
-        <div class="icon-badge">🤝</div>
-        <h3 class="point-title">心地よい出会い</h3>
-        <p class="point-desc">無理に広げない、でも残る。そんな縁を。</p>
+        <div class="icon-badge">✨</div>
+        <h3 class="point-title">新しい一歩のきっかけが見つかる</h3>
+        <p class="point-desc">誰かと話すことで、「やってみよう」が少し具体的になります。</p>
       </div>
+    </div>
+
+    <div class="about-comfort-grid reveal reveal-delay-2">
+      <div class="comfort-item"><span class="comfort-icon">✓</span><span class="comfort-text">初参加歓迎。ひとり参加の方も自然に入りやすい雰囲気です。</span></div>
+      <div class="comfort-item"><span class="comfort-icon">✓</span><span class="comfort-text">無理に話さなくてもOK。聞いているだけでも大丈夫です。</span></div>
+      <div class="comfort-item"><span class="comfort-icon">✓</span><span class="comfort-text">お酒が飲めなくてもOK。ソフトドリンクでも気軽に参加できます。</span></div>
+      <div class="comfort-item"><span class="comfort-icon">✓</span><span class="comfort-text">営業・勧誘メインの場ではありません。名刺がなくても参加できます。</span></div>
     </div>
   </div>
 </section>
@@ -743,6 +857,7 @@ summary::-webkit-details-marker { display: none; }
       <div><span class="section-kicker">Members</span></div>
       <h2 class="section-title" style="margin-top: 8px;">主催メンバー紹介</h2>
       <p class="members-subtitle">株式会社絶対そうしよ！</p>
+      <p class="section-intro-copy">初参加の方もひとり参加の方も安心できるように、話しかけやすい空気づくりを大切にしているメンバーです。</p>
     </div>
 
     <div class="members-grid">
@@ -753,7 +868,7 @@ summary::-webkit-details-marker { display: none; }
           <h3 class="profile-name-en">KOUJI<br>HAMAMURA</h3>
           <p class="profile-name-jp">濱村 晃司</p>
           <div class="profile-divider"></div>
-          <p class="profile-bio">コワーキングスクエア金沢香林坊の管理責任者。挑戦したい人を応援する場に最高のコミュニティを作るために日々奔走中。ワクワクする話を聞かせてくれると喜びます！</p>
+          <p class="profile-bio">初めての方にも声をかけながら、場に入りやすい空気をつくるのが得意です。迷ったら気軽に話しかけてください。</p>
         </div>
       </article>
 
@@ -764,7 +879,7 @@ summary::-webkit-details-marker { display: none; }
           <h3 class="profile-name-en">SHINTARO<br>TOKUNO</h3>
           <p class="profile-name-jp">徳野 新太郎</p>
           <div class="profile-divider"></div>
-          <p class="profile-bio">「挑戦したい人を応援する場をつくりたい」という想いから、この会社を立ち上げました。みんなの背中を『絶対そうしよ』の合言葉で後押し…どころか、引っ張っていきます！</p>
+          <p class="profile-bio">やってみたい気持ちを言葉にするきっかけをつくりたいと思っています。肩の力を抜いて話せる時間をご一緒できたらうれしいです。</p>
         </div>
       </article>
 
@@ -775,9 +890,13 @@ summary::-webkit-details-marker { display: none; }
           <h3 class="profile-name-en">RYUICHI<br>ECHIGO</h3>
           <p class="profile-name-jp">越後 龍一</p>
           <div class="profile-divider"></div>
-          <p class="profile-bio">地域のプロジェクトを支援。人が行き交うスクランブル交差点のような場を目指して活動中。情報発信やイベント、マーケ戦略、広報のことならご相談ください！</p>
+          <p class="profile-bio">人と人が自然につながる場づくりが好きです。初対面でも話しやすい夜になるよう、ゆるくサポートします。</p>
         </div>
       </article>
+    </div>
+
+    <div class="section-inline-cta reveal reveal-delay-3">
+      <a href="https://coworkingsquarekanazawa.peatix.com/" target="_blank" rel="noopener" class="cta-button cta-button-lg">チケットを申し込む（Peatix）</a>
     </div>
   </div>
 </section>
@@ -788,6 +907,7 @@ summary::-webkit-details-marker { display: none; }
     <div class="section-head-center reveal">
       <div><span class="section-kicker">Venue &amp; Access</span></div>
       <h2 class="section-title" style="margin-top: 8px;">会場・アクセス</h2>
+      <p class="section-intro-copy">会場は金沢・香林坊にあるコワーキングスクエア金沢香林坊です。初めての方でも入りやすい、明るく開放的なスペースです。</p>
     </div>
 
     <div class="venue-image reveal reveal-delay-1">
@@ -798,7 +918,7 @@ summary::-webkit-details-marker { display: none; }
       <article class="venue-card">
         <h3 class="venue-title">コワーキングスクエア<br>金沢香林坊</h3>
         <p><span class="text-link">香林坊東急スクエア内にあり、とっても便利！</span>金沢中心部の好立地で、お仕事帰りにも、お買い物ついでにも立ち寄りやすい場所です。</p>
-        <p style="margin-top: 16px;">明るく開放的な空間で、ゆったりと会話を楽しめます。初めてお越しの方でも安心してお越しいただけます。</p>
+        <p style="margin-top: 16px;">会場は明るく開放的で、初対面でも話しやすい落ち着いた雰囲気。初めてお越しの方でも安心して入りやすい空間です。</p>
 
         <div class="venue-info-box">
           <div class="venue-info-row">
@@ -827,6 +947,9 @@ summary::-webkit-details-marker { display: none; }
         <a href="https://www.google.com/maps/search/?api=1&query=%E9%A6%99%E6%9E%97%E5%9D%8A%E6%9D%B1%E6%80%A5%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2" target="_blank" rel="noopener" id="map-app-link" class="map-link">Googleマップで開く →</a>
       </article>
     </div>
+    <div class="section-inline-cta reveal reveal-delay-3">
+      <a href="https://coworkingsquarekanazawa.peatix.com/" target="_blank" rel="noopener" class="cta-button cta-button-lg">チケットを申し込む（Peatix）</a>
+    </div>
   </div>
 </section>
 
@@ -836,6 +959,7 @@ summary::-webkit-details-marker { display: none; }
     <div class="section-head-center reveal">
       <div><span class="section-kicker">Past Events</span></div>
       <h2 class="section-title" style="margin-top: 8px;">これまでの様子</h2>
+      <p class="section-intro-copy">過去回では、会社員、フリーランス、起業準備中の方、学生など、さまざまな人が参加しました。初対面でも話しやすく、ゆるく自然につながれる雰囲気です。</p>
       <p class="mt-4 text-sm">Instagramでイベントの雰囲気をチェック！</p>
     </div>
 
@@ -874,34 +998,50 @@ summary::-webkit-details-marker { display: none; }
     <div class="reveal">
       <details class="faq-item">
         <summary class="faq-summary">
-          <span class="faq-summary-inner"><span class="num-circle">Q</span> 一人での参加でも大丈夫？</span>
+          <span class="faq-summary-inner"><span class="num-circle">Q</span> 初参加でも大丈夫ですか？</span>
           <span class="faq-toggle">✚</span>
         </summary>
-        <p class="faq-answer">もちろん！実際、お一人様での参加が半分以上です。主催メンバーがしっかりサポートします。</p>
+        <p class="faq-answer">もちろん大歓迎です。ひとり参加の方も多く、自然に話せる雰囲気を大切にしています。主催メンバーも必要に応じてさりげなくサポートします。</p>
       </details>
 
       <details class="faq-item">
         <summary class="faq-summary">
-          <span class="faq-summary-inner"><span class="num-circle">Q</span> 何時から開催？</span>
+          <span class="faq-summary-inner"><span class="num-circle">Q</span> お酒が飲めなくても参加できますか？</span>
           <span class="faq-toggle">✚</span>
         </summary>
-        <p class="faq-answer">詳細はPeatixのイベントページでご確認ください。基本的には平日夜の開催です。</p>
+        <p class="faq-answer">はい、大丈夫です。飲み会という名前ですが、お酒を飲まなくても楽しめます。ソフトドリンクの参加も歓迎です。</p>
       </details>
 
       <details class="faq-item">
         <summary class="faq-summary">
-          <span class="faq-summary-inner"><span class="num-circle">Q</span> 服装は？</span>
+          <span class="faq-summary-inner"><span class="num-circle">Q</span> 途中参加・途中退出はできますか？</span>
           <span class="faq-toggle">✚</span>
         </summary>
-        <p class="faq-answer">普段着で大丈夫です。お仕事帰りのスーツでも、カジュアルでも、お好きなスタイルでどうぞ。</p>
+        <p class="faq-answer">可能です。ご都合に合わせて気軽にご参加ください。参加時間が限られていても、無理なく来ていただけます。</p>
       </details>
 
       <details class="faq-item">
         <summary class="faq-summary">
-          <span class="faq-summary-inner"><span class="num-circle">Q</span> お酒が飲めなくても参加できる？</span>
+          <span class="faq-summary-inner"><span class="num-circle">Q</span> 営業や勧誘の場ですか？</span>
           <span class="faq-toggle">✚</span>
         </summary>
-        <p class="faq-answer">はい！ソフトドリンクも豊富にご用意しています。大切なのは、楽しい時間を共有すること。</p>
+        <p class="faq-answer">営業・勧誘を目的としたイベントではありません。安心して交流できる場を目指しています。名刺がなくても参加できます。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span class="faq-summary-inner"><span class="num-circle">Q</span> 何時から開催ですか？</span>
+          <span class="faq-toggle">✚</span>
+        </summary>
+        <p class="faq-answer">詳細な日時や参加費はPeatixのイベントページでご確認ください。基本的には平日夜の開催です。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span class="faq-summary-inner"><span class="num-circle">Q</span> 服装は自由ですか？</span>
+          <span class="faq-toggle">✚</span>
+        </summary>
+        <p class="faq-answer">普段着で大丈夫です。お仕事帰りのスーツでも、カジュアルでも、お好きなスタイルでどうぞ。無理に話さなくてもOKなので、気楽な気持ちで来てください。</p>
       </details>
     </div>
   </div>
@@ -918,11 +1058,11 @@ summary::-webkit-details-marker { display: none; }
         合言葉に。
       </h2>
       <p class="cta-lead">
-        次の一歩を踏み出したいあなたへ。<br>
-        金沢・香林坊でお会いできることを、心から楽しみにしています。
+        ひとりで考えていたことも、<br>
+        誰かと話すことで少し前に進むかもしれません。
       </p>
       <a href="https://coworkingsquarekanazawa.peatix.com/" target="_blank" rel="noopener" id="cta-peatix-bottom" class="cta-button cta-button-lg cta-button-featured">
-        🍺 チケットを申し込む (Peatix)
+        チケットを申し込む（Peatix）
       </a>
       <p class="cta-note">※チケット販売ページ(Peatix)へ遷移します</p>
     </div>
@@ -948,7 +1088,7 @@ summary::-webkit-details-marker { display: none; }
 <!-- STICKY CTA -->
 <div class="sticky-cta">
   <a href="https://coworkingsquarekanazawa.peatix.com/" target="_blank" rel="noopener" class="cta-button">
-    🍺 チケットを申し込む (Peatix)
+    チケットを申し込む（Peatix）
   </a>
 </div>
 
